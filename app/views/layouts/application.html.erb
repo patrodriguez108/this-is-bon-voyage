@@ -7,9 +7,19 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   </head>
 
   <body>
-    <%= yield %>
+
+    <div class="nav-bar">
+      <%= render partial: 'layouts/nav_links' %>
+    </div>
+
+    <div class="page-wrapper">
+      <%= yield %>
+    </div>
   </body>
 </html>
