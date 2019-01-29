@@ -32,6 +32,10 @@ body {
   background-color: #efeeea;
 }
 
+.nav-bar {
+  background-color: #3ef9b2;
+}
+
 .nav-bar nav {
   align-content: center;
   padding-bottom: 5px;
@@ -47,16 +51,12 @@ body {
   align-items: baseline;
 }
 
-.nav-links {
-  display: flex;
-  flex-direction: row;
-}
-
 .navbar-list {
   list-style-type: none;
 }
 
 .navbar-list .nav-item {
+  display: inline;
   padding-left: 20px;
   font-size: 120%;
 }
