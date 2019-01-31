@@ -26,7 +26,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 gem 'pg'
 gem 'paperclip'
-gem 'aws-sdk-s3', '~> 1.30', '>= 1.30.1'
+gem 'aws-sdk', '~> 3.0'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
