@@ -28,8 +28,17 @@ a:visited {
   color: #63819b;
 }
 
+.artworks-index {
+  display: block;
+  margin: 100px;
+}
+
 body {
   background-color: #efeeea;
+}
+
+.image-thumbnail {
+  max-width: 300px;
 }
 
 .nav-bar {
