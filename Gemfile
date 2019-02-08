@@ -25,8 +25,8 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'pg'
-gem 'paperclip'
-gem 'aws-sdk', '~> 3.0'
+gem 'mini_magick', '~> 4.9', '>= 4.9.2'
+gem 'aws-sdk-s3', '~> 1.30', '>= 1.30.1'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

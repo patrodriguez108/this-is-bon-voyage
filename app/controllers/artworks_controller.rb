@@ -9,10 +9,10 @@ class ArtworksController < ApplicationController
   def create
     artwork = Artwork.new(artwork_params)
 
-    if artwork.save
+    artwork.image.attach(params[:artwork][:image])
+    if artwork.image.attached? && artwork.save
       redirect_to artwork_path(artwork.id)
     else
-      @errors = artwork.errors.full_messages
       render 'new'
     end
   end
@@ -24,6 +24,6 @@ class ArtworksController < ApplicationController
   private
 
   def artwork_params
-    params.require(:artwork).permit(:name, :description, :image)
+    params.require(:artwork).permit(:name, :description)
   end
 end
