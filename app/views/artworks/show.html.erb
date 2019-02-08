@@ -1,1 +1,11 @@
-<%= image_tag url_for(@artwork.image) %>
+<div class="artwork-title">
+  <%= @artwork.name %>
+</div>
+
+<div class="artwork-piece">
+  <%= image_tag url_for(@artwork.image) %>
+</div>
+
+<div class="artwork-statement">
+  <%= @artwork.description %>
+</div>

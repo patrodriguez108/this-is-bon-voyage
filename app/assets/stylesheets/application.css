@@ -28,13 +28,38 @@ a:visited {
   color: #63819b;
 }
 
+.artwork-title {
+  display: inline-block;
+  font-size: 150%;
+  margin-left: 300px;
+}
+
+.artwork-thumb {
+  margin: 50px;
+}
+
+.artwork-piece {
+  text-align: center;
+  margin: 50px;
+}
+
+.artwork-statement {
+  text-align: center;
+}
+
 .artworks-index {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
   margin: 100px;
+  text-align: center;
 }
 
 body {
   background-color: #efeeea;
+}
+
+img {
+  max-width: 800px;
 }
 
 .image-thumbnail {
