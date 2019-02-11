@@ -1,6 +1,8 @@
-<div class="new-piece-link">
-  <%= link_to "Add new piece", new_artwork_path %>
-</div>
+<% if logged_in? %>
+  <div class="new-piece-link">
+    <%= link_to "Add new piece", new_artwork_path %>
+  </div>
+<% end %>
 
 <div class="artworks-index">
   <% @artworks.each do |artwork| %>
