@@ -28,6 +28,21 @@ a:visited {
   color: #63819b;
 }
 
+.about-my-face {
+  text-align: center;
+  margin: 50px;
+}
+
+.about-text {
+  width: 800px;
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  margin: auto;
+  margin-bottom: 100px;
+}
+
 .artwork-title {
   display: inline-block;
   font-size: 150%;
@@ -45,7 +60,6 @@ a:visited {
 
 .artwork-statement {
   width: 800px;
-  /*height: 100px;*/
   position: absolute;
   left: 0;
   right: 0;
