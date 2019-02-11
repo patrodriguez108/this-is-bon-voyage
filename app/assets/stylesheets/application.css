@@ -43,6 +43,19 @@ a:visited {
   margin-bottom: 100px;
 }
 
+.artwork-new-form {
+  width: 100px;
+  height: 100px;
+
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  margin: auto;
+}
+
 .artwork-title {
   display: inline-block;
   font-size: 150%;
