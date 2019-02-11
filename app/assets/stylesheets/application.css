@@ -87,6 +87,19 @@ img {
   max-width: 300px;
 }
 
+.login-form {
+  width: 100px;
+  height: 100px;
+
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  margin: auto;
+}
+
 .nav-bar {
   background-color: #3ef9b2;
 }
@@ -114,6 +127,10 @@ img {
   display: inline;
   padding-left: 20px;
   font-size: 120%;
+}
+
+.new-piece-link {
+  text-align: center;
 }
 
 .page-wrapper {

@@ -5,9 +5,11 @@ class ArtworksController < ApplicationController
   end
 
   def new
+    authorize
   end
 
   def create
+    authorize
     artwork = Artwork.new(artwork_params)
 
     artwork.image.attach(params[:artwork][:image])
