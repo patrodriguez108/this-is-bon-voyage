@@ -28,8 +28,63 @@ a:visited {
   color: #63819b;
 }
 
+.about-my-face {
+  text-align: center;
+  margin: 50px;
+}
+
+.about-text {
+  width: 800px;
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  margin: auto;
+  margin-bottom: 100px;
+}
+
+.artwork-title {
+  display: inline-block;
+  font-size: 150%;
+  margin-left: 300px;
+}
+
+.artwork-thumb {
+  margin: 50px;
+}
+
+.artwork-piece {
+  text-align: center;
+  margin: 50px;
+}
+
+.artwork-statement {
+  width: 800px;
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  margin: auto;
+  margin-bottom: 100px;
+}
+
+.artworks-index {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 100px;
+  text-align: center;
+}
+
 body {
   background-color: #efeeea;
+}
+
+img {
+  max-width: 800px;
+}
+
+.image-thumbnail {
+  max-width: 300px;
 }
 
 .nav-bar {

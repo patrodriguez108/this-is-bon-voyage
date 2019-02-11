@@ -1,6 +1,7 @@
 class ArtworksController < ApplicationController
 
   def index
+    @artworks = Artwork.order(id: :asc)
   end
 
   def new

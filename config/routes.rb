@@ -3,5 +3,7 @@ Rails.application.routes.draw do
 
   resources :artworks
 
+  get '/about', to: 'pages#about', as: 'about'
+
   root 'artworks#index'
 end

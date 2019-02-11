@@ -1,1 +1,11 @@
-<%= link_to "Add new piece", new_artwork_path %>
+<div class="new-piece-link">
+  <%= link_to "Add new piece", new_artwork_path %>
+</div>
+
+<div class="artworks-index">
+  <% @artworks.each do |artwork| %>
+    <span class="artwork-thumb">
+      <%= link_to image_tag(url_for(artwork.image), class: "image-thumbnail"), artwork_path(artwork.id) %>
+    </span>
+  <% end %>
+</div>
