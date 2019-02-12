@@ -73,11 +73,8 @@ a:visited {
 
 .artwork-statement {
   width: 800px;
-  position: absolute;
-  left: 0;
-  right: 0;
-
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 100px;
 }
 
@@ -90,6 +87,16 @@ a:visited {
 
 body {
   background-color: #efeeea;
+}
+
+.button-next {
+  float: right;
+  margin-bottom: 100px;
+}
+
+.button-previous {
+  float: left;
+  margin-bottom: 100px;
 }
 
 img {
@@ -140,6 +147,13 @@ img {
   display: inline;
   padding-left: 20px;
   font-size: 120%;
+}
+
+.navigation-buttons {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
 }
 
 .new-piece-link {

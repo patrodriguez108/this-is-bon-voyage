@@ -9,3 +9,17 @@
 <div class="artwork-statement">
   <%= @artwork.description %>
 </div>
+
+<div class="navigation-buttons">
+  <% if Artwork.exists?(@artwork.id - 1) %>
+    <span class="button-previous">
+      <%= link_to "Previous", Artwork.find(@artwork.id - 1) %>
+    </span>
+  <% end %>
+
+  <% if Artwork.exists?(@artwork.id + 1) %>
+    <span class="button-next">
+      <%= link_to "Next", Artwork.find(@artwork.id + 1) %>
+    </span>
+  <% end %>
+</div>
