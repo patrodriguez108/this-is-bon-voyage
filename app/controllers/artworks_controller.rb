@@ -10,11 +10,12 @@ class ArtworksController < ApplicationController
 
   def create
     authorize
-    artwork = Artwork.new(artwork_params)
+    @artwork = Artwork.new(artwork_params)
 
-    artwork.image.attach(params[:artwork][:image])
-    if artwork.image.attached? && artwork.save
-      redirect_to artwork_path(artwork.id)
+    attach_image
+
+    if @artwork.image.attached? && @artwork.save
+      redirect_to artwork_path(@artwork.id)
     else
       render 'new'
     end
@@ -24,9 +25,44 @@ class ArtworksController < ApplicationController
     @artwork = Artwork.find_by(id: params[:id])
   end
 
+  def edit
+    authorize
+    @artwork = Artwork.find_by(id: params[:id])
+  end
+
+  def update
+    authorize
+    @artwork = Artwork.find_by(id: params[:id])
+    @artwork.assign_attributes(artwork_params)
+
+    if params[:artwork][:image]
+      @artwork.image.purge
+      attach_image
+    end
+
+    if @artwork.image.attached? && @artwork.save
+      redirect_to artwork_path(@artwork.id)
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    authorize
+    @artwork = Artwork.find_by(id: params[:id])
+    @artwork.image.purge
+    @artwork.destroy
+
+    redirect_to root_path
+  end
+
   private
 
   def artwork_params
     params.require(:artwork).permit(:name, :description)
+  end
+
+  def attach_image
+    @artwork.image.attach(params[:artwork][:image])
   end
 end

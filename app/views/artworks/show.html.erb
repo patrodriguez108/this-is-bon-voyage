@@ -11,15 +11,23 @@
 </div>
 
 <div class="navigation-buttons">
-  <% if Artwork.exists?(@artwork.id - 1) %>
+  <% if @artwork.previous != nil %>
     <span class="button-previous">
-      <%= link_to "Previous", Artwork.find(@artwork.id - 1) %>
+      <%= link_to "Previous", @artwork.previous %>
     </span>
   <% end %>
 
-  <% if Artwork.exists?(@artwork.id + 1) %>
+  <% if @artwork.next != nil %>
     <span class="button-next">
-      <%= link_to "Next", Artwork.find(@artwork.id + 1) %>
+      <%= link_to "Next", @artwork.next %>
     </span>
   <% end %>
 </div>
+
+
+<% if logged_in? %>
+  <div class="artwork-ud">
+    <%= link_to "Edit", edit_artwork_path(@artwork.id) %>
+    <%= link_to "Delete", artwork_path(@artwork.id), method: :delete, data: { confirm: "Are you sure?" } %>
+  </div>
+<% end %>
