@@ -1,24 +1,16 @@
-# README
+# Bon Voyage
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Author: Patrick Bon Rodriguez
 
-Things you may want to cover:
+## Back End
 
-* Ruby version
+- Ruby on Rails version 5.2.2
+- PostgreSQL - Database
+- Active Storage - Image attachment
+- AWS S3 - Image Storage
+- Heroku - Deployment
 
-* System dependencies
+## Front End
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- HTML
+- CSS
