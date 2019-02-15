@@ -26,6 +26,8 @@
 
 
 <% if logged_in? %>
-  <%= link_to "Edit", edit_artwork_path(@artwork.id) %>
-  <%= link_to "Delete", artwork_path(@artwork.id), method: :delete, data: { confirm: "Are you sure?" } %>
+  <div class="artwork-ud">
+    <%= link_to "Edit", edit_artwork_path(@artwork.id) %>
+    <%= link_to "Delete", artwork_path(@artwork.id), method: :delete, data: { confirm: "Are you sure?" } %>
+  </div>
 <% end %>
