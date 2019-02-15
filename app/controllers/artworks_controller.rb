@@ -26,10 +26,12 @@ class ArtworksController < ApplicationController
   end
 
   def edit
+    authorize
     @artwork = Artwork.find_by(id: params[:id])
   end
 
   def update
+    authorize
     @artwork = Artwork.find_by(id: params[:id])
     @artwork.assign_attributes(artwork_params)
 
@@ -46,6 +48,7 @@ class ArtworksController < ApplicationController
   end
 
   def destroy
+    authorize
     @artwork = Artwork.find_by(id: params[:id])
     @artwork.image.purge
     @artwork.destroy
