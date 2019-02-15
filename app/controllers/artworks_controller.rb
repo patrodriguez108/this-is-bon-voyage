@@ -30,7 +30,27 @@ class ArtworksController < ApplicationController
   end
 
   def update
+    @artwork = Artwork.find_by(id: params[:id])
+    @artwork.assign_attributes(artwork_params)
 
+    if params[:artwork][:image]
+      @artwork.image.purge
+      attach_image
+    end
+
+    if @artwork.image.attached? && @artwork.save
+      redirect_to artwork_path(@artwork.id)
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    @artwork = Artwork.find_by(id: params[:id])
+    @artwork.image.purge
+    @artwork.destroy
+
+    redirect_to root_path
   end
 
   private
