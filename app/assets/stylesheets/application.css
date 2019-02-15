@@ -110,7 +110,7 @@ img {
 }
 
 .image-thumbnail {
-  max-width: 50%;
+  max-width: 300px;
 }
 
 .login-form {
