@@ -75,7 +75,7 @@ a:visited {
 .artwork-title {
   display: inline-block;
   font-size: 150%;
-  margin-left: 300px;
+  margin-left: 20%;
 }
 
 .artwork-ud {
@@ -88,6 +88,13 @@ a:visited {
   display: flex;
   flex-wrap: wrap;
   margin: 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+.artworks-label {
+  display: block;
+  font-size: 150%;
   text-align: center;
 }
 
@@ -110,7 +117,7 @@ img {
 }
 
 .image-thumbnail {
-  max-width: 300px;
+  max-width: 600px;
 }
 
 .login-form {
