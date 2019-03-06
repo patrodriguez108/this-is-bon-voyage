@@ -1,0 +1,9 @@
+<div class="artwork-title">
+  <%= @gallery.title %>
+</div>
+
+<% @gallery.images.each do |image| %>
+  <div class="artwork-piece">
+    <%= image_tag url_for(image) %>
+  </div>
+<% end %>
