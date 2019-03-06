@@ -21,6 +21,10 @@
     <span class="button-next">
       <%= link_to "Next", @artwork.next %>
     </span>
+  <% elsif Gallery.first != nil %>
+    <span class="button-next">
+      <%= link_to "Next", Gallery.first %>
+    </span>
   <% end %>
 </div>
 
