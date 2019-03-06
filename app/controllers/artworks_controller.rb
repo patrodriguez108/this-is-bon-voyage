@@ -2,6 +2,7 @@ class ArtworksController < ApplicationController
 
   def index
     @artworks = Artwork.order(id: :asc)
+    @galleries = Gallery.order(id: :asc)
   end
 
   def new
@@ -59,7 +60,7 @@ class ArtworksController < ApplicationController
   private
 
   def artwork_params
-    params.require(:artwork).permit(:name, :description)
+    params.require(:artwork).permit(:title, :description)
   end
 
   def attach_image
