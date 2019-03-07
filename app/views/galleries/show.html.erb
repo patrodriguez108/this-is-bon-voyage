@@ -26,3 +26,10 @@
     </span>
   <% end %>
 </div>
+
+<% if logged_in? %>
+  <div class="artwork-ud">
+    <%= link_to "Edit", edit_gallery_path(@gallery.id) %>
+    <%= link_to "Delete", gallery_path(@gallery.id), method: :delete, data: { confirm: "Are you sure?" } %>
+  </div>
+<% end %>
