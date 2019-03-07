@@ -1,16 +1,16 @@
 <div class="artwork-form">
-  <%= form_for :artwork, url: url, method: method, multipart: true do |f| %>
+  <%= form_for :gallery, url: url, method: method, multipart: true do |f| %>
     <div class="field">
       <%= f.label :title %>
       <%= f.text_field :title %>
     </div>
     <div class="field">
-      <%= f.label :description %>
-      <%= f.text_area :description %>
+      <%= f.label :cover_page %>
+      <%= f.file_field :cover_page %>
     </div>
     <div class="field">
-      <%= f.label :image %>
-      <%= f.file_field :image %>
+      <%= f.label :images %>
+      <%= f.file_field :images, multiple: true %>
     </div>
     <div class="actions">
       <%= f.submit 'Submit' %>

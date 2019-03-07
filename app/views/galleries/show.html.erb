@@ -1,0 +1,35 @@
+<div class="artwork-title">
+  <%= @gallery.title %>
+</div>
+
+<% @gallery.images.each do |image| %>
+  <div class="artwork-piece">
+    <%= image_tag url_for(image) %>
+  </div>
+<% end %>
+
+<div class="navigation-buttons">
+  <% if @gallery.previous != nil %>
+    <span class="button-previous">
+      <%= link_to "Previous", @gallery.previous %>
+    </span>
+
+  <% elsif Artwork.last != nil %>
+    <span class="button-previous">
+      <%= link_to "Previous", Artwork.last %>
+    </span>
+  <% end %>
+
+  <% if @gallery.next != nil %>
+    <span class="button-next">
+      <%= link_to "Next", @gallery.next %>
+    </span>
+  <% end %>
+</div>
+
+<% if logged_in? %>
+  <div class="artwork-ud">
+    <%= link_to "Edit", edit_gallery_path(@gallery.id) %>
+    <%= link_to "Delete", gallery_path(@gallery.id), method: :delete, data: { confirm: "Are you sure?" } %>
+  </div>
+<% end %>
