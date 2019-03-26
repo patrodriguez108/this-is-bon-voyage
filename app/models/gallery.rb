@@ -11,4 +11,10 @@ class Gallery < ApplicationRecord
     Gallery.where("id > ?", id).first
   end
 
+  def cover_image
+    
+  end
+
+# write method to grab first image of images
+# remove instances of cover_page
 end
