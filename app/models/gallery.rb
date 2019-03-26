@@ -1,6 +1,5 @@
 class Gallery < ApplicationRecord
 
-  has_one_attached :cover_page
   has_many_attached :images
 
   def previous
@@ -12,9 +11,6 @@ class Gallery < ApplicationRecord
   end
 
   def cover_image
-    
+    images.first
   end
-
-# write method to grab first image of images
-# remove instances of cover_page
 end
